@@ -1,0 +1,126 @@
+package ru.mirea.java2020;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        job1();
+        job2(args);
+        job3();
+        job4();
+        job5(5);
+    }
+    static void job1(){
+        System.out.println("/////Задание 1/////");
+        Random random = new Random();
+        int sum = 0;
+        int mas[] = {1,2,3,4,5,6,7,8,9,10};
+
+        for (int i=0;i<10;i++){
+            sum+=mas[i];
+        }
+        System.out.println(sum);
+        sum=0;
+        int i=0;
+        while (i<10){
+            sum+=mas[i];
+            i++;
+        }
+        System.out.println(sum);
+        sum=0;
+        i=0;
+
+        do{
+            sum+=mas[i];
+            i++;
+        } while (i<10);
+        System.out.println(sum);
+    }
+
+    static void job2(String args[]){
+        System.out.println("/////Задание 2/////");
+        int len = args.length;
+        for (int i=0;i<len;i++){
+            System.out.println(args[i]);
+        }
+    }
+
+    static void job3(){
+        System.out.println("/////Задание 3/////");
+        double number;
+        String message;
+        for (double i=1;i<=10;i++){
+            number = 1/i;
+            message = String.format("%.2f", number);
+            System.out.println(message);
+        }
+    }
+
+    static void job4(){
+        System.out.println("/////Задание 4/////");
+        int swap;
+        Random rand = new Random();
+        int mas[] = new int[10];
+        for (int i=0;i<10;i++){
+            mas[i] = rand.nextInt()%10;
+        }
+
+        for (int i=0;i<10;i++)
+        {
+            System.out.print(mas[i]+" ");
+        }
+        System.out.println();
+
+        for (int i=0;i<10;i++)
+            for (int j=0;j<10;j++){
+                if (mas[i]<mas[j]){
+                    swap = mas[i];
+                    mas[i] = mas[j];
+                    mas[j] = swap;
+                }
+            }
+        for (int i=0;i<10;i++)
+        {
+            System.out.print(mas[i]+" ");
+        }
+        System.out.println();
+
+        for (int i=0;i<10; i++){
+            mas[i] = (int)(Math.random()*100);
+        }
+
+        for (int i=0;i<10;i++)
+        {
+            System.out.print(mas[i]+" ");
+        }
+        System.out.println();
+
+        for (int i=0;i<10;i++)
+            for (int j=0;j<10;j++){
+                if (mas[i]<mas[j]){
+                    swap = mas[i];
+                    mas[i] = mas[j];
+                    mas[j] = swap;
+                }
+            }
+
+        for (int i=0;i<10;i++)
+        {
+            System.out.print(mas[i]+" ");
+        }
+        System.out.println();
+    }
+
+    static void job5(int num){
+        System.out.println("/////Задание 5/////");
+        int fact=1;
+        if (num==0) System.out.print(0);
+        else {
+            for (int i = 1; i <= num; i++) {
+                fact = fact*i;
+            }
+            System.out.print(fact);
+        }
+    }
+}
