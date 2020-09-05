@@ -5,11 +5,11 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        job1();
-        job2(args);
-        job3();
-        job4();
-        job5(5);
+        job1(); // Задание №1
+        job2(args); // Задание №2
+        job3(); // Задание №3
+        job4(); // Задание №4
+        job5(5); // Задание №5
     }
     static void job1(){
         System.out.println("/////Задание 1/////");
