@@ -1,0 +1,24 @@
+package ru.mirea.java2020;
+
+import java.util.Scanner;
+
+public class DogKennels {
+    int sizeNow;
+    Dog[] dogs;
+
+    public DogKennels(int size){
+        this.sizeNow = 0;
+        dogs = new Dog[size];
+    }
+
+    public void setDogs(Dog ... dogs){
+       for (int i=0; i<dogs.length;i++){
+           this.dogs[sizeNow] = dogs[i];
+           sizeNow++;
+       }
+    }
+
+    public Dog getDog(int i){
+        return dogs[i];
+    }
+}
