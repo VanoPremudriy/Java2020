@@ -115,7 +115,7 @@ public class Main {
     static void job5(int num){
         System.out.println("/////Задание 5/////");
         int fact=1;
-        if (num==0) System.out.print(0);
+        if (num<=0) System.out.print(0);
         else {
             for (int i = 1; i <= num; i++) {
                 fact = fact*i;
