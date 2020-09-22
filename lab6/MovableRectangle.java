@@ -9,7 +9,15 @@ public class MovableRectangle extends Rectangle{
         mp = new MovablePoint(x,y);
     }
 
+    public void setMp(double x, double y) {
+        this.mp.setX(x);
+        this.mp.setY(y);
+    }
 
+    public MovablePoint getMp() {
+        return mp;
+    }
+    
     @Override
     public String toString() {
         return "Rectangle{" +
