@@ -23,13 +23,13 @@ public class Main {
 
         while (player1.size()>0 && player2.size()>0 && count!=106){
             count++;
-            if ((player1.get(0) > player2.get(0) && player1.get(0) != 9 && player2.get(0) != 0) || (player1.get(0) == 0 && player2.get(0) == 9)){
+            if ((player1.get(0) > player2.get(0) && (player1.get(0) != 9 || player2.get(0) != 0)) || (player1.get(0) == 0 && player2.get(0) == 9)){
                 player1.add(player1.get(0));
                 player1.add(player2.get(0));
                 player1.remove(0);
                 player2.remove(0);
             }
-            else if ((player1.get(0) < player2.get(0) && player1.get(0) != 0 && player2.get(0) != 9) || (player1.get(0) == 9 && player2.get(0) == 0)){
+            else if ((player1.get(0) < player2.get(0) && (player1.get(0) != 0 || player2.get(0) != 9)) || (player1.get(0) == 9 && player2.get(0) == 0)){
                 player2.add(player1.get(0));
                 player2.add(player2.get(0));
                 player1.remove(0);
